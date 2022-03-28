@@ -203,9 +203,57 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  body .sec_roadmap .head .desc h3 {
+    font-size: 40px;
+  }
+  body .sec_roadmap .head .desc span svg {
+    width: 45px;
+    height: 36px;
+  }
+  body .sec_roadmap .head .desc h5 {
+    font-size: 22px;
+  }
+  body .sec_roadmap .head .desc {
+    margin: 0 0 0 1%;
+    min-height: 235px;
+  }
+  body .sec_roadmap .head figure img {
+    min-height: 235px;
+  }
+  body .sec_roadmap .head.sec_left .desc {
+    margin: 0 1% 0 0;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  body .sec_roadmap .head .desc h3 {
+    font-size: 36px;
+  }
+  body .sec_roadmap .head .desc span svg {
+    width: 40px;
+    height: 30px;
+  }
+  body .sec_roadmap .head .desc h5 {
+    font-size: 19px;
+  }
+  body .sec_roadmap .head figure {
+    width: 100%;
+  }
+  body .sec_roadmap .head .desc {
+    margin: 0;
+    min-height: initial;
+    width: 100%;
+  }
+  body .sec_roadmap .head figure img {
+    min-height: 165px;
+  }
+  body .sec_roadmap .head.sec_left .desc {
+    margin: 0 0 0;
+  }
+  .sec_roadmap .head.sec_left.flipnew {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .newfile .newnewcss span:nth-child(1) {
     font-size: 80px;
   }
