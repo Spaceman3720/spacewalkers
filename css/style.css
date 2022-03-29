@@ -127,7 +127,7 @@
   bottom: 0;
   width: 40px;
   height: 40px;
-  background: #ff537b;
+  background: #0096FF;
   top: 0;
   margin: auto;
   z-index: 2;
@@ -2052,7 +2052,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .sec_faq h2 {
   text-align: center;
-  background: #ff537b;
+  background: #121240;
+  font-size: 40px;
   padding: 10px;
 }
 .sec_faq .accordion-container {
@@ -2071,7 +2072,7 @@ input[type="number"]::-webkit-outer-spin-button {
   position: relative;
   width: 100%;
   height: auto;
-  background-color: #00008b;
+  background-color: #121240;
 }
 .sec_faq .set > a {
   display: block;
@@ -2084,7 +2085,7 @@ input[type="number"]::-webkit-outer-spin-button {
   transition: all 0.2s linear;
 }
 .sec_faq .set > a.active {
-  background-color: #ff537b;
+  background-color: #0096FF;
   color: #fff;
 }
 .sec_faq .set > a:before {
@@ -2106,7 +2107,7 @@ input[type="number"]::-webkit-outer-spin-button {
   position: relative;
   width: 100%;
   height: auto;
-  background-color: #00008b;
+  background-color: #121240;
   border-bottom: 1px solid #ddd;
   display: none;
 }
@@ -2118,7 +2119,7 @@ input[type="number"]::-webkit-outer-spin-button {
 /*Sec Roadmap*/
 .sec_roadmap {
   padding: 0 0 30px;
-  background: #00008b;
+  background: #121240;
 }
 .sec_roadmap h2 {
   text-align: center;
