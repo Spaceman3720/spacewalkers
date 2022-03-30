@@ -36,9 +36,22 @@
   <main class="font-fatfrank flex min-h-screen flex-col">
     <div class="text-outline-marquee bg-yellow-200 py-2 text-3xl text-yellow-200"
       style="background: #4444e8; color: #fff; font-family: Fast Hand">
-      <marquee style="color: #FFFFFF" loop="infinite">Mint April 6th. Mint April 6th. Mint April 6th. Mint April 6th. Mint
-        April 6th. Mint April 6th. Mint April 6th. Mint April 6th. Mint April 6th. Mint April 6th.</marquee>
-
+      <div class="marquee">
+        <div class="marquee__inner" aria-hidden="true">
+          <span>Mint April 6.</span>
+          <span>Mint April 6.</span>
+          <span>Mint April 6.</span>
+          <span>Mint April 6.</span>
+          <span>Mint April 6.</span>
+          <span>Mint April 6.</span>
+          <span>Mint April 6.</span>
+          <span>Mint April 6.</span>
+          <span>Mint April 6.</span>
+          <span>Mint April 6.</span>
+          <span>Mint April 6.</span>
+          <span>Mint April 6.</span>
+        </div>
+      </div>
     </div>
 
     <div class="newfile">
@@ -78,22 +91,22 @@
           </h2>
           <div class="space-y-4 p-4 text-center md:space-y-8">
             <div class="h-2"></div>
-            <div class="newbox">
+            <div class="newbox timer">
               <div class="chunkks">
-                <h2>50</h2>
+                <h2 id="hours"></h2>
                 <span>Hours</span>
               </div>
               <div class="chunkks">
-                <h2>10</h2>
+                <h2 id="minutes"></h2>
                 <span>Minutes</span>
               </div>
               <div class="chunkks">
-                <h2>30</h2>
+                <h2 id="seconds"></h2>
                 <span>Seconds</span>
               </div>
-              <div class="btttn">
+              <!-- <div class="btttn">
                 <a href="https://opensea.io/">TMINUS</a>
-              </div>
+              </div> -->
             </div>
             <div class="h-6"></div>
           </div>
@@ -103,7 +116,18 @@
 
     <div class="font-fatfrank text-outline-marquee bg-yellow-200 py-2 text-3xl text-yellow-200"
       style="background: #4444e8; color: #fff; font-family: Fast Hand">
-      <marquee style="color: #FFFFFF" loop="infinite">Walking on the moon. Walking on the moon. Walking on the moon. Walking on the moon. Walking on the moon. Walking on the moon. Walking on the moon. Walking on the moon. Walking on the moon. Walking on the moon.</marquee>
+      <div class="marquee">
+        <div class="marquee__inner" aria-hidden="true">
+          <span>Walking on the Moon</span>
+          <span>Walking on the Moon</span>
+          <span>Walking on the Moon</span>
+          <span>Walking on the Moon</span>
+          <span>Walking on the Moon</span>
+          <span>Walking on the Moon</span>
+          <span>Walking on the Moon</span>
+          <span>Walking on the Moon</span>
+        </div>
+      </div>
     </div>
 
     <div class="nftsliders" style="background: #121240;">
@@ -426,6 +450,23 @@
 </body>
 
 <script>
+  let countdownDate = new Date("Apr 6, 2022 15:00:00").getTime();
+
+  setInterval(() => {
+    let now = new Date().getTime();
+    var distance = countdownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    $('#hours').text(hours + days * 24);
+    $('#minutes').text(minutes);
+    $('#seconds').text(seconds);
+
+  }, 1000)
+
   $('.nftsliders').slick({
       infinite: true,
       slidesToShow: 3,
