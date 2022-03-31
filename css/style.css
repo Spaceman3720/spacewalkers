@@ -62,18 +62,19 @@
 }
 
 .newfile {
-  position: relative;
+  background: linear-gradient(
+      to right,
+      rgba(30, 70, 80, 0.7),
+      rgba(30, 20, 150, 0.7)
+    ),
+    url("../images/newbackground.png");
 }
-.newimgbackground {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
+
 .newfile header h1 {
   font-family: "Fast Hand";
   color: #4ea8f5 !important;
+  -webkit-text-stroke: 3px white;
+  letter-spacing: 0.05em;
 }
 .newfile h2 span {
   color: #4444e8 !important;
