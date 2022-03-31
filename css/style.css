@@ -24,6 +24,43 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap");
 
+.marquee {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  --offset: 20vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+}
+
+.marquee__inner {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: marquee 5s linear infinite;
+}
+
+.marquee span {
+  white-space: nowrap;
+  padding: 0 1vw;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(var(--move-final), 0, 0);
+  }
+}
+
 .newfile {
   position: relative;
 }
@@ -40,7 +77,7 @@
 }
 .newfile h2 span {
   color: #4444e8 !important;
-  font-family: "Fast Hand";
+  font-family: "fatfrank";
 }
 .newfile h2 span.text-white {
   color: #fff !important;
@@ -48,7 +85,7 @@
 .newbox {
   display: flex;
   flex-wrap: wrap;
-  font-family: "Fast Hand";
+  font-family: "fatfrank";
 }
 .newbox .btttn {
   width: 100%;
@@ -127,7 +164,7 @@
   bottom: 0;
   width: 40px;
   height: 40px;
-  background: #0096FF;
+  background: #0096ff;
   top: 0;
   margin: auto;
   z-index: 2;
@@ -2085,7 +2122,7 @@ input[type="number"]::-webkit-outer-spin-button {
   transition: all 0.2s linear;
 }
 .sec_faq .set > a.active {
-  background-color: #0096FF;
+  background-color: #0096ff;
   color: #fff;
 }
 .sec_faq .set > a:before {
