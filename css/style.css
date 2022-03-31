@@ -43,7 +43,7 @@
   display: flex;
   position: relative;
   transform: translate3d(var(--move-initial), 0, 0);
-  animation: marquee 5s linear infinite;
+  animation: marquee 18s linear infinite;
 }
 
 .marquee span {
@@ -62,12 +62,7 @@
 }
 
 .newfile {
-  background: linear-gradient(
-      to right,
-      rgba(30, 70, 80, 0.7),
-      rgba(30, 20, 150, 0.7)
-    ),
-    url("../images/newbackground.png");
+  background: url("../images/newbackground.png");
 }
 
 .newfile header h1 {
