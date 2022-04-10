@@ -88,6 +88,9 @@
           </h2>
           <div class="space-y-4 p-4 text-center md:space-y-8">
             <div class="h-2"></div>
+            <button class="btn" id="mint" style="display: none">
+              <a href="https://mint.spcewalkers.io">MINT</a>
+            </button>
             <div class="newbox timer">
               <div class="chunkks">
                 <h2 id="hours"></h2>
@@ -101,9 +104,6 @@
                 <h2 id="seconds"></h2>
                 <span>Seconds</span>
               </div>
-              <!-- <div class="btttn">
-                <a href="https://opensea.io/">TMINUS</a>
-              </div> -->
             </div>
             <div class="h-6"></div>
           </div>
@@ -452,37 +452,45 @@
 </body>
 
 <script>
-  let countdownDate = new Date(1649599200*1000).getTime();
+  let countdownDate = new Date(1649599200 * 1000).getTime();
 
-  setInterval(() => {
-    let now = new Date().getTime();
-    var distance = countdownDate - now;
+  if(countdownDate - new Date().getTime() <= 0){
+    document.getElementById("mint").style.display = "inline";
+    $('#hours').text(0);
+    $('#minutes').text(0);
+    $('#seconds').text(0);
+  } else {
+    setInterval(() => {
+      let now = new Date().getTime();
+      var distance = countdownDate - now;
 
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    $('#hours').text(hours + days * 24);
-    $('#minutes').text(minutes);
-    $('#seconds').text(seconds);
+      $('#hours').text(hours + days * 24);
+      $('#minutes').text(minutes);
+      $('#seconds').text(seconds);
 
-  }, 1000)
+    }, 1000)
 
-  $('.nftsliders').slick({
+    $('.nftsliders').slick({
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
       responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
         }
-      }
-    ]
+      ]
     });
+  }
+
  /*FAQ*/
 $(document).ready(function(){
   $('.set > a').on("click", function(){

@@ -1177,6 +1177,7 @@ body {
   -moz-appearance: none;
   appearance: none;
   align-items: center;
+  background-color: #4444e8;
 }
 
 .btn > :not([hidden]) ~ :not([hidden]) {
