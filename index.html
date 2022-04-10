@@ -65,7 +65,7 @@
           <a class="" href="https://discord.gg/spacewalkers"><img src="discord-logo.svg" alt="Discord" class="w-6 text-white md:w-8" /></a>
           <a class="" href="https://opensea.io"><img src="opensea-logo.svg" alt="OpenSea"
               class="inline-block w-6 text-white md:w-8" /></a>
-          <a class="" href="https://etherscan.io"><img src="etherscan-logo.svg" alt="Etherscan"
+          <a class="" href="https://etherscan.io/address/0xd7799ae043833f7c798dd5334f272c9a071fc80c"/><img src="etherscan-logo.svg" alt="Etherscan"
               class="inline-block w-6 text-white md:w-8" /></a>
         </div>
       </nav>
@@ -464,6 +464,12 @@
       let now = new Date().getTime();
       var distance = countdownDate - now;
 
+      if(distance <= 0) {
+        document.getElementById("mint").style.display = "inline";
+        $('#hours').text(0);
+        $('#minutes').text(0);
+        $('#seconds').text(0);
+      } else {
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -472,7 +478,7 @@
       $('#hours').text(hours + days * 24);
       $('#minutes').text(minutes);
       $('#seconds').text(seconds);
-
+      }
     }, 1000)
 
     $('.nftsliders').slick({

@@ -31,7 +31,6 @@
   -ms-user-select: none;
 
   user-select: none;
-<<<<<<< HEAD
   position: relative;
   overflow: hidden;
   --offset: 20vw;
@@ -63,8 +62,6 @@
 }
 
 .newfile {
-=======
->>>>>>> 88c98558973616cea38bb1870364aeaf51554035
   position: relative;
   overflow: hidden;
   --offset: 20vw;
